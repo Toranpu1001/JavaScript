@@ -1,0 +1,17 @@
+body{
+    background-color: rgb(107, 107, 107);
+    font: normal 20px;
+    color: rgb(0, 13, 24);
+    font-family: "Microsoft", Arial, sans-serif;
+}
+
+div{
+    text-align: center;
+    padding: 9px;
+}
+section{
+    background-color: azure;
+    border-radius: 20px;
+    height: 70px;
+    margin: auto
+}

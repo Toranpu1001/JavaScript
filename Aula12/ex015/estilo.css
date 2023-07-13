@@ -1,0 +1,38 @@
+body{
+    background-color: rgb(26, 26, 26);
+    font: normal 15pt arial;
+}
+header{
+color: white;
+text-align: center;
+text-shadow: 0px 2px 5px rgba(87, 87, 87, 0.072);
+}
+section{
+background-color: white ;
+border-radius: 10px;
+padding: 15px;
+width: 500px;
+margin: auto;
+box-shadow: 0px 0px 5px rgb(255, 255, 255);
+
+}
+footer{
+color: white;
+text-align: center;
+font-style: italic;
+}
+.transition-background {
+    animation: gradientAnimation 10s ease infinite;
+  }
+  
+  @keyframes gradientAnimation {
+    0% { background: red; }
+    14% { background: orange; }
+    28% { background: yellow; }
+    42% { background: green; }
+    57% { background: blue; }
+    71% { background: indigo; }
+    85% { background: violet; }
+    100% { background: red; }
+  }
+  

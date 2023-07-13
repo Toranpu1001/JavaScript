@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="calculadora">  
+        <input type="text" id="visor" readonly>
+        
+            <input type="text" id="visor" readonly>
+            <button onclick="limpar()">c</button>
+            <button onclick="apagar()">CE</button>
+            <button onclick="inserir('/')">/</button>
+            <button onclick="inserir('*')">*</button>
+            <button onclick="inserir('7')">7</button>
+            <button onclick="inserir('8')">8</button>
+            <button onclick="inserir('9')">9</button>
+            <button onclick="inserir('-')">-</button>
+            <button onclick="inserir('4')">4</button>
+            <button onclick="inserir('5')">5</button>
+            <button onclick="inserir('6')">6</button>
+            <button onclick="inserir('+')">+</button>
+            <button onclick="inserir('1')">1</button>
+            <button onclick="inserir('2')">2</button>
+            <button onclick="inserir('3')">3</button>
+            <button onclick="calcular()">=</button>
+            <button onclick="inserir('0')">0</button>
+            <button onclick="inserir('.')">.</button>
+
+        </div>
+<script>src = "calculadora.js"
+            // Adiciona um evento de teclado para a página
+        document.addEventListener('keydown', function(event) {
+            // Verifica se a tecla pressionada é um número
+            if (event.key >= '0' && event.key <= '9') {
+                // Atualiza o visor com o número pressionado
+                document.getElementById('visor').value += event.key;
+            }
+        });
+let entrada = "";//Variável para armazenar a entrada do usúario
+
+//Função para inserir dígitos e operadores no visor
+function inserir(valor){
+
+    entrada += valor; //Adiciona o valor do botão á entrada do usuário
+    document.getElementById("visor").value = entrada; // Atualiza o valor do visor
+
+}
+
+//Função para limpar o valor
+function limpar() {
+
+    entrada = ""; // Limpa a entrada do usuário
+    document.getElementById("visor").value = ""; // Limpa i valor do visor
+
+
+}
+
+//Função para apagar o último caractere do visor
+function apagar() {
+
+    entrada =  entrada.slice(0, -1); //Remove o útlimo caractere da entradada do usuário
+    document.getElementById("visor").value = entrada; //Atualiza o valor do visor
+
+} 
+
+//Função para calcular o resultado
+function calcular() {
+
+    let resultado = eval(entrada); //Usa a função eval() para avaliar a expressão de entrada
+    document.getElementById("visor").value = resultado;
+    document.getElementById("visor").value = resultado.replace (".", ",");
+    resultado.toLocaleString('pt-BR');
+    
+}
+
+
+
+
+
+</script>
+    </body>
+</html>

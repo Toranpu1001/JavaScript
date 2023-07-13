@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body {
+            font: normal 80pt calibri;
+            color: rgb(208, 208, 209);
+            background-color: rgb(25, 25, 27);
+            
+
+
+        }
+
+
+    </style>
+</head>
+<body>
+    
+
+    <script>
+        //Neste script, estou a pedir que o usuario(a) dê um 'input' com seu nome, 
+        //para logo após eu lhe mostrar a quantidade de letras do seu nome, e como ele fica em maiúsculo e minúsculo.
+       
+        /*var n1 = Number(window.prompt('Digite o primeiro número:'))
+        var n2 = Number(window.prompt('Digite o primeiro número:'))
+        var result = n1 + n2
+        window.alert(`O resultado da soma entre ${n1} e ${n2} é ${result}`)*/
+
+        /*var idade = Number(window.prompt("Qual é sua idade?"))
+
+        var result = idade < 18 ? 'menor de idade' : 'maior de idade'
+         
+        window.alert(`Você é ${result}`)*/
+
+        var nac = window.prompt("Qual é sua nacionalidade?")
+        var idade = Number(window.prompt("Qual é sua idade?"))
+
+            if(nac == "Brasileiro", "brasileiro" && idade >= 18){
+
+            window.alert("Certo! Você está apto para votar nas eleições de 2026 no Brasil! ")
+            document.write("<center>:D</center>")
+        }
+            else{
+            window.alert("Você não está apto para votar nas eleições de 2026 no Brasil!");
+            document.write("<center>:/</center>")
+        }
+
+    </script>
+</body>
+</html>

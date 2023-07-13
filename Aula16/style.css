@@ -1,0 +1,29 @@
+body{
+    background-color: rgb(8, 7, 19);
+    color: aliceblue;
+}
+h1{
+    text-align: center;
+    color: azure;
+    padding: 10px;
+    font: normal 30px arial
+    
+}
+section{  
+    margin: auto;
+    height: 200px;
+    width: 300px;
+    background-color: rgb(102, 27, 171);
+    border-radius: 20px; 
+    box-shadow: 0px 0px 10px rgb(102, 27, 171);
+}
+div{
+    text-align: center;
+}
+div#res{
+    text-align: center;
+    padding: 15px;
+}
+input{
+    width: 50px;
+}

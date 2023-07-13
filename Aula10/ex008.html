@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=h1, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+body{
+
+    font: normal 20pt Arial;
+    background-color: rgb(32, 32, 59);
+    color: aliceblue;
+
+}
+h1{
+    background: rgb(211, 16, 55);
+}
+.txtn1{
+    font: normal 18px Arial;
+    background-color: rgb(250, 243, 243);
+    width: PX;
+    display: block;
+    margin-bottom: 10px
+}
+
+
+    </style>
+</head>
+<body>
+    <h1><strong>CALCULADORA</strong></h1>
+    <input type="number" class="txtn1" id="txtn1"> +
+    <input type="number" class="txtn1" id="txtn2">
+    <input type="button" value="somar" onclick="somar()">
+    <input type="number" class="txtn1" id="txtn3"> -
+    <input type="number" class="txtn1" id="txtn4">
+    <input type="button" value="subtrair" onclick="menos()">
+    <input type="number" class="txtn1" id="txtn5"> x
+    <input type="number" class="txtn1" id="txtn6">
+    <input type="button" value="multiplicar" onclick="multiplicar()">
+    <input type="number" class="txtn1" id="txtn7">
+    <input type="number" class="txtn1" id="txtn8">
+    <input type="button" value="dividir" onclick="dividir()">
+
+
+
+    <div id="res"></br>R E S U L T A D O=</div>
+
+<script>
+        function somar() {
+
+            var tn1 = document.getElementById('txtn1')
+            var tn2 = document.querySelector('input#txtn2')
+            var res = document.querySelector('div#res')
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var s = n1 + n2
+
+            var valores = [n1, n2, s];
+            for (var i = 0; i < valores.length; i++) {
+            valores[i] = valores[i].toLocaleString('pt-BR')
+            }
+
+            res.innerHTML = `</br>A soma entre ${valores[0]} e ${valores[1]} é = <strong>${valores[2]}</strong>`
+        }
+        function menos(){
+
+            var tn3 = document.querySelector("input#txtn3")
+            var tn4 = document.querySelector("input#txtn4")
+            var res2 = document.querySelector("div#res")
+            var n3 = Number(tn3.value)
+            var n4 = Number(tn4.value)
+            var s1 = n3 - n4
+
+            
+            var valores = [n3, n4, s1];
+            for (var i = 0; i < valores.length; i++) {
+            valores[i] = valores[i].toLocaleString('pt-BR')
+            }
+                res.innerHTML = `</br>A subtração entre ${valores[0]} e ${valores[1]} é = <strong>${valores[2]}</strong>`
+           
+        }
+
+            function multiplicar(){
+
+                var tn5 = document.querySelector("input#txtn5")
+                var tn6 = document.querySelector("input#txtn6")
+                var res3 = document.querySelector("div#res")
+                var n5 = (tn5.value)
+                var n6 = (tn6.value)
+                var s2 = n5 * n6
+
+                var valores = [n5, n6, s2]
+                for (var i = 0; i < valores.length; i++) {
+                valores[i] = valores[i].toLocaleString('pt-BR')
+                }
+
+                res.innerHTML = `${valores[0]} multiplicado por ${valores[1]} é igual = ${valores[2]}`
+
+        }
+
+        function dividir(){
+
+            var tn7 = document.querySelector("input#txtn7")
+            var tn8 = document.querySelector("input#txtn8")
+            var res4 = document.querySelector("div#res")
+            var n7 = (tn7.value)
+            var n8 = (tn8.value)
+            var s3 = n7 / n8
+            
+            var valores = [n7, n8, s3]
+            for(var i = 0; i < valores.length; i++){
+            valores[i] = valores[i].toLocaleString("pt-BR")
+              }
+
+              res.innerHTML = `A divisão entre ${valores[0]} e ${valores[1]} é igual = ${valores[2]}`
+        }
+
+        
+            
+
+
+        
+    </script>
+</body>
+</html>

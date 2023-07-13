@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pra gringo é mais caro</title>
+</head>
+
+<body>
+    <h1>Você é gringohh???</h1>
+    Você é de que país?<input type="text" name="nactxt" id="nactxt">
+    <input type="button" value="Responder" onclick="text()">
+    <div id=res>
+    </div>
+
+    <script>
+
+        function text() {
+
+
+            var nac = document.querySelector("input#nactxt")
+            var res = document.querySelector("div#res")
+            var txtv = String(nac.value)
+            res.innerHTML = `<p>Você é do país ${txtv}</p>`
+            if (txtv.toLowerCase() != 'brasil') {
+                res.innerHTML += "Pra Gringo é mais carohhhh!"
+            } else {
+                res.innerHTML += "<p>SALVE!! Aqui é B R A S I L huehuehuehue<p>"
+            }
+        }
+        /*
+        function text() {
+            var txt = document.querySelector('input#nactxt')
+            var res = document.querySelector('div#res')
+            var txtv = String(txt.value)
+            res.innerHTML = `<p>Você é do país ${txtv}</p>`
+            if (txtv.toLowerCase() != 'brasil') {
+                res.innerHTML += '<p>Você é estrangeiro</p>'
+            } else {
+                res.innerHTML += '<p>Você é brasileiro</p>'
+            }
+        }
+*/
+    </script>
+</body>
+
+</html>
